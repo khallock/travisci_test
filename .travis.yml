@@ -5,7 +5,8 @@ osx_image: xcode6.4
 
 before_install:
   - brew cask install xquartz
+  - wget -O /usr/local/Library/Taps/caskroom/homebrew-cask/Casks/ncar-ncl.rb https://raw.githubusercontent.com/khallock/homebrew-cask/fix_ncar-ncl/Casks/ncar-ncl.rb
+  - brew cask install ncar-ncl
 
 script:
-  - ls -lR /usr/X11
-  - ls -l /opt/X11
+  - ncl -V
